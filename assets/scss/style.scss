@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+* {
+    font-family: Work Sans, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#options {
+    legend {
+        font-weight: bold;
+    }
+    .optionInput, #calcButton {
+        width: 150px;
+        height: 30px;
+        margin-right: 40px;
+        font-size: 1rem;
+    }
+    #year {  // compensation for width inconsistencies of input elements
+        width: 158px;
+    }
+    #splittingCheck {  // compensation for width inconsistencies of input elements
+        width: 154px;
+    }
+    #calcButton {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @keyframes unfold {
+        from {display: none}
+        to {display: flex}
+    }
+    div { // dotted borders
+        border-bottom: 1px dotted #bbb;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+    }
+    div:last-of-type {
+        border: none;
+    }
+    border: 1px dotted #000;
+    border-radius: 5px;
+    p { // output section
+        border-bottom: 1px solid #bbb;
+        padding-bottom: 2px;
+        span {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    }
+}

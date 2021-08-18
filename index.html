@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkommenssteuerrechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <h1>
+        Einkommenssteuerrechner
+    </h1>
+    <form id="options">
+        <div>
+            <select id="year" class="optionInput">
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+            </select>
+            <label for="year">
+                Jahr für die Berechnung der Einkommenssteuer
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="splittingCheck" class="optionInput" onchange="toggleSecondIncome()">
+            <label for="splitting">
+                Splittingtarif für Partner:innen nutzen (Eingabe von zwei Einkommen)
+            </label>
+        </div>
+        <div>
+            <input type="number" id="income1" class="optionInput" placeholder="Betrag in €">
+            <label for="income1">Einkommen</label>
+        </div>
+        <div id="secondIncome" style="display: none">
+            <input type="number" id="income2" class="optionInput" placeholder="Betrag in €">
+            <label for="income2">Einkommen Partner:in</label>
+        </div>
+        <div>
+            <input type="button" value="Einkommenssteuer berechnen" id="calcButton" onclick="calc()">
+        </div>
+        <div>
+            <p>
+                Zu zahlende Einkommenssteuer: <span id="output"></span>
+            </p>
+        </div>
+    </form>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
