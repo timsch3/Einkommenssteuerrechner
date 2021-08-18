@@ -4,6 +4,7 @@ function toggleSecondIncome() {
     }
     else {
         document.getElementById("secondIncome").style.display = "none"
+        document.getElementById("income2").value = null
     }
 }
 
